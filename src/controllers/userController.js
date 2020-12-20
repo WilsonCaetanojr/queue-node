@@ -11,7 +11,7 @@ export default {
       password
     };
 
-    await Queue.add({ createUser });
+    await Queue.add("registrationMail", { createUser });
 
     return createUser;
   }
